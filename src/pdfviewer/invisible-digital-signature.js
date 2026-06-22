@@ -322,7 +322,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         document.getElementById('fileUpload').click();
     }
     function signDocument(e) {
-        var url = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/AddSignature";
+        var url = "http://localhost:62527/api/pdfviewer/AddSignature";
         viewer.saveAsBlob().then(function (value) {
             var reader = new FileReader();
             reader.readAsDataURL(value);
@@ -423,7 +423,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postData)
             };
-            var apiUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ValidateSignature';
+            var apiUrl = 'http://localhost:62527/api/pdfviewer/ValidateSignature';
             fetch(apiUrl, options)
                 .then(function (response) { return response.json(); })
                 .then(function (body) {

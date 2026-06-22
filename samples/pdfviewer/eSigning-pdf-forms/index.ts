@@ -102,7 +102,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
                     for (var formField of viewer.formFieldCollections) {
                         viewer?.formDesignerModule.updateFormField(formField, { backgroundColor: finishedBackground } as any);
                     }
-                    const url: string = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/FlattenDownload";
+                    const url: string = "http://localhost:62527/api/pdfviewer/FlattenDownload";
                     viewer.saveAsBlob().then((blob: Blob) => {
                         return convertBlobToBase64(blob);
                     }).then((base64String: string) => {

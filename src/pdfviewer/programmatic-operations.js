@@ -676,8 +676,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         var dropElement = document.getElementsByClassName('control-fluid')[0];
         var uploadObj = new ej2_inputs_1.Uploader({
             asyncSettings: {
-                saveUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Save',
-                removeUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Remove'
+                saveUrl: 'http://localhost:62527/api/FileUploader/Save',
+                removeUrl: 'http://localhost:62527/api/FileUploader/Remove'
             },
             dropArea: dropElement,
             success: onFileSuccess,

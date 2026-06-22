@@ -369,7 +369,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                             var formField = _a[_i];
                             viewer === null || viewer === void 0 ? void 0 : viewer.formDesignerModule.updateFormField(formField, { backgroundColor: finishedBackground });
                         }
-                        var url = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/FlattenDownload";
+                        var url = "http://localhost:62527/api/pdfviewer/FlattenDownload";
                         viewer.saveAsBlob().then(function (blob) {
                             return convertBlobToBase64(blob);
                         }).then(function (base64String) {

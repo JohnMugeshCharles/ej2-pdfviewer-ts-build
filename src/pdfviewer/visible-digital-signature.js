@@ -384,8 +384,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         var downloadFileName = 'invisible-digital-signature';
         var documentData = '';
         var uploaderApiPath = {
-            saveUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Save',
-            removeUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Remove'
+            saveUrl: 'http://localhost:62527/api/FileUploader/Save',
+            removeUrl: 'http://localhost:62527/api/FileUploader/Remove'
         };
         var createNewGroup = document.getElementById('visibleSign_createNew_exclusive');
         var existingFieldGroup = document.getElementById('visibleSign_existingField_exclusive');
@@ -448,7 +448,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(postData)
                         };
-                        apiUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ValidateSignature';
+                        apiUrl = 'http://localhost:62527/api/pdfviewer/ValidateSignature';
                         fetch(apiUrl, options)
                             .then(function (response) { return response.json(); })
                             .then(function (body) {
@@ -663,7 +663,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
                             var request = new XMLHttpRequest();
                             var jsonObject = getRequestBody(pdfData);
                             var requestData = JSON.stringify(jsonObject);
-                            request.open('POST', 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/AddVisibleSignature', true);
+                            request.open('POST', 'http://localhost:62527/api/pdfviewer/AddVisibleSignature', true);
                             request.setRequestHeader('Content-type', 'application/json charset=UTF-8');
                             request.onload = function () {
                                 if (request.status === 200) {

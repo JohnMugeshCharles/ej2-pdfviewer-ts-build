@@ -447,8 +447,8 @@ import { Font } from '@syncfusion/ej2/excel-export';
     //Initialize the control by preload files
     let uploadObj: Uploader = new Uploader({
         asyncSettings: {
-            saveUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Save',
-            removeUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Remove'
+            saveUrl: 'http://localhost:62527/api/FileUploader/Save',
+            removeUrl: 'http://localhost:62527/api/FileUploader/Remove'
         },
         dropArea: dropElement,
         success: onFileSuccess,

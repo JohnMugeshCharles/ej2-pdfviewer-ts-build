@@ -70,8 +70,8 @@ MultiSelect.Inject(CheckBoxSelection);
     let downloadFileName: string = 'invisible-digital-signature';
     let documentData: string = '';
     const uploaderApiPath: AsyncSettingsModel = {
-        saveUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Save',
-        removeUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/FileUploader/Remove'
+        saveUrl: 'http://localhost:62527/api/FileUploader/Save',
+        removeUrl: 'http://localhost:62527/api/FileUploader/Remove'
     }
     const createNewGroup: HTMLElement = document.getElementById('visibleSign_createNew_exclusive') as HTMLDivElement;
     const existingFieldGroup: HTMLElement = document.getElementById('visibleSign_existingField_exclusive') as HTMLDivElement;
@@ -129,7 +129,7 @@ MultiSelect.Inject(CheckBoxSelection);
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(postData)
         };
-        const apiUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/ValidateSignature';
+        const apiUrl = 'http://localhost:62527/api/pdfviewer/ValidateSignature';
         fetch(apiUrl, options)
             .then(response => response.json())
             .then(body => {
@@ -347,7 +347,7 @@ MultiSelect.Inject(CheckBoxSelection);
                 const request = new XMLHttpRequest();
                 const jsonObject = getRequestBody(pdfData as string);
                 const requestData = JSON.stringify(jsonObject);
-                request.open('POST', 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/AddVisibleSignature', true);
+                request.open('POST', 'http://localhost:62527/api/pdfviewer/AddVisibleSignature', true);
                 request.setRequestHeader('Content-type', 'application/json charset=UTF-8');
                 request.onload = () => {
                     if (request.status === 200) {

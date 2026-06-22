@@ -195,7 +195,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkVie
         'data': reader.result,
         'type': type
       });
-      const url: string = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/LoadFile";
+      const url: string = "http://localhost:62527/api/pdfviewer/LoadFile";
       const xhr: XMLHttpRequest = new XMLHttpRequest();
       xhr.open('Post', url, true);
       xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');

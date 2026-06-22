@@ -484,7 +484,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                     'data': reader.result,
                     'type': type
                 });
-                var url = "https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/LoadFile";
+                var url = "http://localhost:62527/api/pdfviewer/LoadFile";
                 var xhr = new XMLHttpRequest();
                 xhr.open('Post', url, true);
                 xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
