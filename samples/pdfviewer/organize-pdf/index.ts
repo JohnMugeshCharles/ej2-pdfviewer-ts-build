@@ -1,0 +1,33 @@
+import { enableRipple } from '@syncfusion/ej2-base';
+enableRipple((window as any).ripple);
+
+import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-pdfviewer';
+// tslint:disable-next-line:max-line-length
+ 
+PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer);
+
+/**
+ * Default PdfViewer sample
+ */
+
+    
+    let viewer: PdfViewer = new PdfViewer();
+    viewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+    viewer.resourceUrl ="https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib";
+    viewer.pageOrganizerSettings = { showImageZoomingSlider: true };
+       
+    
+    
+    viewer.appendTo('#pdfViewer');
+    let isInitialLoading: boolean = true;
+    viewer.documentLoad = function (): any {
+        if(isInitialLoading){
+            viewer.isPageOrganizerOpen = true;
+            isInitialLoading = false;
+        }
+        else{
+            viewer.isPageOrganizerOpen = false;
+        }
+    }
+

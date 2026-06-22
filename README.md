@@ -1,1 +1,3 @@
-# ej2-pdfviewer-ts-build
+# ej2-documents-ts-samples
+
+typescript document libraries 
